@@ -14,7 +14,7 @@ IMPLEMENT_DYNAMIC(TabMatrix, CDialog)
 BOOL TabMatrix::OnInitDialog()
 {
 	CDialog::OnInitDialog();
-
+	// add matrices Cstring to vectors
 	MatrixACString.push_back(std::vector<CString*>());
 	MatrixACString[MatrixACString.size() - 1].push_back(&A00);
 	MatrixACString[MatrixACString.size() - 1].push_back(&A01);
@@ -146,8 +146,10 @@ END_MESSAGE_MAP()
 
 void TabMatrix::OnBnClickedButtonCrtMatr()
 {
+	// fill matrices vectors values
 	FillMatrixVector(MatrixA, MatrixACString);
 	FillMatrixVector(MatrixB, MatrixBCString);
+
 	CalculateMatrixMult();
 	OutputResultMatrixMult();
 }

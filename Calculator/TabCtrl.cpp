@@ -48,6 +48,7 @@ void TabCtrl::Init()
 	tabPages[0]->ShowWindow(SW_SHOW);
 	tabPages[1]->ShowWindow(SW_HIDE);
 
+	//put information inside the tab
 	SetRectangle();
 }
 

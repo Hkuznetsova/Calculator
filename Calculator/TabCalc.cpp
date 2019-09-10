@@ -24,7 +24,7 @@ TabCalc::~TabCalc()
 BOOL TabCalc::OnInitDialog()
 {
 	CDialog::OnInitDialog();
-	
+	// Add buttons to vector
 	buttons.push_back(&button0);
 	buttons.push_back(&button1);
 	buttons.push_back(&button2);
@@ -44,11 +44,12 @@ BOOL TabCalc::OnInitDialog()
 	buttons.push_back(&buttonC);
 	value1 = 0;
 
-
+	// create font
 	font.CreateFont(32, 0, 0, 0, FW_BOLD, 0, 0, 0, DEFAULT_CHARSET,
 	0, 0, 0, 0, _T("Microsoft Sans Serif"));
 	srand(time(NULL));
 
+	// init buttons with font and color
 	for each (CMFCButton* item in buttons)
 	{
 		(*item).EnableWindowsTheming(FALSE);
@@ -223,12 +224,14 @@ void TabCalc::Clear()
 
 void TabCalc::CheckOperation(int opNum)
 {
+	// if operation is first
 	if (operationNumBuffer < 0)
 	{
 		value1 = _wtof(resultValueString);
 		operationNumBuffer = opNum;
 		resultValueString = "";
 	}
+	// if operation is =
 	else if (opNum == 4)
 	{
 		value2 = _wtof(resultValueString);
@@ -239,6 +242,7 @@ void TabCalc::CheckOperation(int opNum)
 
 		operationNumBuffer = -1;
 	}
+	// if operation is + - / x
 	else if (opNum >= 0)
 	{
 		value2 = _wtof(resultValueString);

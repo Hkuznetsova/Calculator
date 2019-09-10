@@ -98,6 +98,8 @@ BOOL CCalculatorDlg::OnInitDialog()
 	SetIcon(m_hIcon, TRUE);			// Set big icon
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 
+	// Tab controller init
+
 	tabCntr.InsertItem(0, _T("Calc"));
 	tabCntr.InsertItem(1, _T("Matrix"));
 

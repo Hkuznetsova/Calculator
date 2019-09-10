@@ -69,7 +69,6 @@ public:
 	afx_msg void CheckOperation(int operationNum);
 
 private:
-	std::vector<CMFCButton> buttonVect;
 	CFont font;
 	CString resultValueString;
 	std::vector<CMFCButton*> buttons;
