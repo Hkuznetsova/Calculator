@@ -106,6 +106,9 @@
     <ClInclude Include="CalculatorDlg.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TabCalc.h" />
+    <ClInclude Include="TabCtrl.h" />
+    <ClInclude Include="TabMatrix.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +119,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="TabCalc.cpp" />
+    <ClCompile Include="TabCtrl.cpp" />
+    <ClCompile Include="TabMatrix.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Calculator.rc" />
